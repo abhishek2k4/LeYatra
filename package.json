@@ -1,0 +1,21 @@
+{
+  "name": "leyatra",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "server",
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:server": "npm run dev --workspace=@leyatra/server",
+    "build:server": "npm run build --workspace=@leyatra/server",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3"
+  }
+}
